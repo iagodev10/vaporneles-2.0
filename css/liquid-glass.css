@@ -1,0 +1,390 @@
+/* ==========================================================================
+   LIQUID GLASS (VIDRO LÍQUIDO) - PREMIUM DESIGN SYSTEM
+   Identidade Visual Preservada: #f58972 (Accent), #2c3e50 (Dark), Branco e Cinza
+   ========================================================================== */
+
+:root {
+  /* Paleta Original do Projeto */
+  --brand-accent: #f58972;
+  --brand-accent-hover: #e86c55;
+  --brand-dark: #2c3e50;
+  
+  /* Efeitos de Vidro Líquido (Liquid Glass) */
+  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 100%);
+  --glass-bg-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.25) 100%);
+  
+  /* Highlights / Contornos translúcidos para reflexo */
+  --glass-border-top: rgba(255, 255, 255, 0.9);
+  --glass-border-left: rgba(255, 255, 255, 0.7);
+  --glass-border-right: rgba(255, 255, 255, 0.3);
+  --glass-border-bottom: rgba(255, 255, 255, 0.2);
+  
+  /* Desfoque e Saturação otimizados */
+  --glass-blur: blur(16px) saturate(120%);
+  
+  /* Sombras e Reflexos Internos (Profundidade) */
+  --glass-shadow: 0 12px 32px 0 rgba(44, 62, 80, 0.12); /* Sombra baseada no brand-dark */
+  --glass-reflection: inset 0 0 0 1px rgba(255, 255, 255, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.6);
+  
+  /* Glows com a cor original */
+  --accent-glow: 0 0 20px rgba(245, 137, 114, 0.4);
+  --accent-glow-hover: 0 0 35px rgba(245, 137, 114, 0.65);
+  
+  /* Cores de Texto Originais */
+  --text-primary: #2c3e50;
+  --text-secondary: #555555;
+  --text-light: #ffffff;
+  
+  /* Bordas arredondadas altas */
+  --border-radius-lg: 24px;
+  --border-radius-md: 16px;
+  --border-radius-sm: 8px;
+}
+
+/* ==========================================================================
+   ESTRUTURA BASE E BACKGROUND FLUIDO
+   ========================================================================== */
+body {
+  background-color: #f4f7f6; /* Fundo super claro para dar contraste ao vidro */
+  color: var(--text-secondary);
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+/* Background animado usando APENAS as cores originais para criar a distorção do vidro */
+body::before, body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: -1;
+  opacity: 0.15;
+  animation: float-blob 25s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+
+body::before {
+  width: 60vw;
+  height: 60vw;
+  background: var(--brand-accent); /* Laranja original */
+  top: -10%;
+  left: -10%;
+}
+
+body::after {
+  width: 50vw;
+  height: 50vw;
+  background: var(--brand-dark); /* Azul escuro original */
+  bottom: -10%;
+  right: -10%;
+  animation-delay: -12.5s;
+}
+
+@keyframes float-blob {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10vw, 5vh) scale(1.1); }
+  100% { transform: translate(-5vw, 15vh) scale(0.9); }
+}
+
+/* Tipografia Preservada e Otimizada para Vidro */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================================================
+   COMPONENTES LIQUID GLASS
+   ========================================================================== */
+
+/* Aplicando Liquid Glass em Cards e Containers */
+.carousel-item-content, 
+.about-card, 
+.feature-item, 
+.product-card,
+.testimonial,
+.service-card,
+.resp-tabs-container {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  
+  /* Contornos para efeito 3D do vidro cortado */
+  border-top: 1px solid var(--glass-border-top) !important;
+  border-left: 1px solid var(--glass-border-left) !important;
+  border-right: 1px solid var(--glass-border-right) !important;
+  border-bottom: 1px solid var(--glass-border-bottom) !important;
+  
+  box-shadow: var(--glass-shadow), var(--glass-reflection) !important;
+  border-radius: var(--border-radius-lg) !important;
+  padding: 40px !important; /* Espaçamento generoso */
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay de Brilho Dinâmico (Highlight) */
+.carousel-item-content::after, 
+.about-card::after, 
+.feature-item::after, 
+.product-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -150%;
+  width: 50%; height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  transition: all 0.8s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Interações: Hover Scale, Glow e Brilho passando */
+.carousel-item-content:hover::after, 
+.about-card:hover::after, 
+.feature-item:hover::after, 
+.product-card:hover::after {
+  left: 200%;
+}
+
+.carousel-item-content:hover, 
+.about-card:hover, 
+.feature-item:hover, 
+.product-card:hover,
+.service-card:hover,
+.testimonial:hover {
+  background: var(--glass-bg-hover) !important;
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 20px 45px 0 rgba(44, 62, 80, 0.15), 
+              inset 0 0 0 1px rgba(255, 255, 255, 0.6), 
+              inset 0 0 35px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Garantir fundos limpos nas seções pai para o vidro brilhar */
+.features-section,
+.testimonials-section,
+.about-section,
+.applications-section,
+.main,
+.intro-section,
+.products-section {
+  background-color: transparent !important;
+  background: transparent !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   HEADER & NAVBAR
+   ========================================================================== */
+.header-top {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.4) 100%) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border-top: 1px solid var(--glass-border-top) !important;
+  border-left: 1px solid var(--glass-border-left) !important;
+  border-bottom: 1px solid var(--glass-border-bottom) !important;
+  box-shadow: var(--glass-shadow), var(--glass-reflection) !important;
+  border-radius: 50px !important;
+  padding: 12px 35px !important;
+  transition: all 0.4s ease !important;
+}
+
+.header-top:hover {
+  box-shadow: var(--accent-glow), var(--glass-reflection) !important;
+}
+
+.cssmenu a {
+  color: var(--text-primary) !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.cssmenu a:hover,
+.cssmenu li.active a {
+  color: var(--brand-accent) !important;
+  text-shadow: 0 0 12px var(--brand-accent-glow) !important;
+}
+
+/* ==========================================================================
+   BOTÕES LIQUID GLASS
+   ========================================================================== */
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-accent-hover) 100%) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.7) !important;
+  color: var(--text-light) !important;
+  box-shadow: var(--accent-glow), inset 0 2px 6px rgba(255,255,255,0.4) !important;
+  border-radius: 50px !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.04) !important;
+  box-shadow: var(--accent-glow-hover), inset 0 2px 6px rgba(255,255,255,0.6) !important;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.15) 100%) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.9) !important;
+  color: var(--text-light) !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1), inset 0 2px 6px rgba(255,255,255,0.6) !important;
+  border-radius: 50px !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.3) 100%) !important;
+  transform: translateY(-4px) scale(1.04) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15), inset 0 2px 6px rgba(255,255,255,0.9) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ==========================================================================
+   TABS E SEÇÕES ESPECÍFICAS
+   ========================================================================== */
+.resp-tabs-list li {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 100%) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.8) !important;
+  border-bottom: none !important;
+  border-radius: var(--border-radius-md) var(--border-radius-md) 0 0 !important;
+  color: var(--text-secondary) !important;
+  margin-right: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+.resp-tabs-list li.resp-tab-active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.5) 100%) !important;
+  color: var(--brand-accent) !important;
+  border-top: 1px solid rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.06) !important;
+  text-shadow: 0 0 8px rgba(245, 137, 114, 0.3);
+}
+
+.tab-text h3 {
+  color: var(--brand-accent) !important;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background: linear-gradient(to bottom, rgba(44, 62, 80, 0.85) 0%, rgba(44, 62, 80, 0.98) 100%) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: var(--text-light) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+}
+
+.footer-col h4, .footer-bottom p {
+  color: var(--text-light) !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.footer-col p, .footer-col ul li a {
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: var(--brand-accent) !important;
+  text-shadow: 0 0 12px var(--brand-accent-glow) !important;
+  padding-left: 8px;
+}
+
+/* ==========================================================================
+   INPUTS, FORMS E SEARCH
+   ========================================================================== */
+input[type="text"], input[type="email"], textarea, .search-container input {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.25) 100%) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.3) !important; /* Inset feel */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9) !important; /* Highlight base */
+  color: var(--text-primary) !important;
+  border-radius: 50px !important;
+  padding: 16px 24px !important;
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0.06) !important;
+  transition: all 0.4s ease !important;
+}
+
+input:focus, textarea:focus, .search-container input:focus {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.55) 100%) !important;
+  border-color: var(--brand-accent) !important;
+  box-shadow: 0 0 20px var(--accent-glow), inset 0 2px 6px rgba(0,0,0,0.05) !important;
+  outline: none !important;
+  transform: translateY(-2px);
+}
+
+::placeholder {
+  color: rgba(44, 62, 80, 0.55) !important;
+}
+
+/* Login Box */
+#loginBox {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  border-top: 1px solid var(--glass-border-top) !important;
+  border-left: 1px solid var(--glass-border-left) !important;
+  box-shadow: 0 20px 45px rgba(44, 62, 80, 0.25), var(--glass-reflection) !important;
+  border-radius: var(--border-radius-lg) !important;
+}
+
+#loginForm label {
+  color: var(--brand-dark) !important;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   HERO, BANNERS E IMAGENS
+   ========================================================================== */
+.product-hero, .header-banner {
+  position: relative;
+}
+
+/* Textos sobre fundos escuros originais */
+.banner-content h1, .product-hero h1 {
+  color: var(--text-light) !important;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.banner-content p {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.accent-text {
+  color: var(--brand-accent) !important;
+  text-shadow: 0 0 15px var(--accent-glow) !important;
+}
+
+/* Imagens com reflexo de vidro sutil */
+.product-image img, .intro-image img {
+  border-radius: var(--border-radius-md) !important;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important;
+  transition: transform 0.5s ease;
+}
+
+/* Ajustes internos para Product Cards */
+.product-card {
+  background: transparent !important;
+}
+.product-card .product-image {
+  border-bottom: 1px solid rgba(255,255,255,0.5) !important;
+}
+.product-card .product-content {
+  background: transparent !important;
+}
