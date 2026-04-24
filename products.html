@@ -4,268 +4,311 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vaporizadoras | Equip Wash Steamer</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/liquid-glass.css" rel="stylesheet" type="text/css" media="all" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <meta name="description" content="Conheça a linha completa de vaporizadoras da Equip Wash Steamer. Modelos portáteis, extratoras e de alta potência para uso profissional.">
+    <meta property="og:title" content="Vaporizadoras | Equip Wash Steamer">
+    <meta property="og:description" content="Conheça a linha completa de vaporizadoras da Equip Wash Steamer. Modelos portáteis, extratoras e de alta potência para uso profissional.">
+    <meta property="og:image" content="images/logo.png">
+    <meta property="og:type" content="website">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet" type="text/css" />
   </head>
-  <body style="scroll-behavior: smooth">
-    <header class="header product-header-compact">
-      <div class="wrap header-wrapper">
-        <div class="header-top">
-          <div class="logo">
-            <a href="index.html"
-              ><img src="images/logo.png" alt="Equip Wash Steamer Logo"
-            /></a>
-          </div>
-          <nav class="cssmenu">
-            <button class="menu-toggle" aria-label="Abrir Menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-            <ul class="nav-list">
-              <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="products.html">Vaporizadoras</a></li>
-              <li><a href="services.html">Soluções</a></li>
-              <li><a href="http://equipbrasil.com.br/">Projetos</a></li>
-              <li class="last"><a href="contact.html">Contato</a></li>
-            </ul>
-          </nav>
-          <div class="header-cta">
-            <a href="contact.html" class="btn btn-primary">Fale Conosco</a>
-          </div>
-        </div>
+  <body>
+    <header class="header-top" id="mainHeader">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="Equip Wash Steamer Logo" /></a>
       </div>
+      <nav class="cssmenu">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="products.html">Vaporizadoras</a></li>
+          <li><a href="services.html">Soluções</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="product-hero">
-      <div class="wrap">
-        <div class="hero-content fade-in-up">
-          <h1>Nossas <span class="accent-text">Vaporizadoras</span></h1>
-          <p>Equipamentos de alta performance para limpeza ecológica e detalhamento automotivo.</p>
-        </div>
+    <section class="page-hero">
+      <div class="wrap fade-in-up">
+        <h1>Nossas Vaporizadoras</h1>
+        <p>Equipamentos de alta performance para limpeza ecológica e detalhamento automotivo.</p>
       </div>
     </section>
 
-    <main class="main">
-      <div class="wrap">
-        <div class="search-container fade-in">
-          <input type="text" id="productSearch" placeholder="Pesquisar vaporizadora (ex: LV-23, Extratora...)" />
-          <i class="search-icon"></i>
-        </div>
-
-        <div class="product-grid" id="productGrid">
-          <!-- Produto 1 -->
-          <article class="product-card fade-in-up" data-name="LV-23 DUPLA 15kw NOVA">
-            <div class="product-image">
-              <img src="images/pic26m.jpg" alt="LV-23 DUPLA 15kw">
-              <span class="product-tag">Nova</span>
-            </div>
-            <div class="product-info">
-              <h3>LV-23 DUPLA 15kw</h3>
-              <p>Ideal para energia trifásica. Com 3 mangueiras, permite lavar e higienizar simultaneamente com máxima eficiência.</p>
-              <div class="product-features">
-                <span>3 Saídas</span>
-                <span>Trifásica</span>
-                <span>Alta Pressão</span>
-              </div>
-              <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
-            </div>
-          </article>
-
-          <!-- Produto 2 -->
-          <article class="product-card fade-in-up" data-name="LV-15 10kw 15kw NOVA" style="animation-delay: 0.1s;">
-            <div class="product-image">
-              <img src="images/pic27m.jpg" alt="LV-15 10kw / 15kw">
-              <span class="product-tag">Nova</span>
-            </div>
-            <div class="product-info">
-              <h3>LV-15 10kw / 15kw</h3>
-              <p>Lavadora e Extratora em um só equipamento. Possui 2 mangueiras para limpeza completa e higienização profunda.</p>
-              <div class="product-features">
-                <span>2 Saídas</span>
-                <span>Dual Power</span>
-                <span>Versátil</span>
-              </div>
-              <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
-            </div>
-          </article>
-
-          <!-- Produto 3 -->
-          <article class="product-card fade-in-up" data-name="LV-23 DUPLA Portátil 15kw NOVA" style="animation-delay: 0.2s;">
-            <div class="product-image">
-              <img src="images/pic28m.jpg" alt="LV-23 DUPLA Portátil">
-              <span class="product-tag">Nova</span>
-            </div>
-            <div class="product-info">
-              <h3>LV-23 DUPLA Portátil</h3>
-              <p>A potência da LV-23 em um formato portátil. 2 mangueiras para serviços rápidos e eficientes em qualquer lugar.</p>
-              <div class="product-features">
-                <span>Portátil</span>
-                <span>2 Saídas</span>
-                <span>Eficiente</span>
-              </div>
-              <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
-            </div>
-          </article>
-
-          <!-- Produto 4 -->
-          <article class="product-card fade-in-up" data-name="EV-7 EXTRATORA 2kw 4kw NOVA" style="animation-delay: 0.3s;">
-            <div class="product-image">
-              <img src="images/pic29m.jpg" alt="EV-7 EXTRATORA">
-              <span class="product-tag">Nova</span>
-            </div>
-            <div class="product-info">
-              <h3>EV-7 EXTRATORA</h3>
-              <p>Especialista em higienização. Perfeita para residências, hotéis e academias. Leve, compacta e muito potente.</p>
-              <div class="product-features">
-                <span>Compacta</span>
-                <span>Residencial</span>
-                <span>Potente</span>
-              </div>
-              <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
-            </div>
-          </article>
-
-          <!-- Produto 5 (Usada) -->
-          <article class="product-card fade-in-up" data-name="GV12 9kw 4,5kw USADA" style="animation-delay: 0.4s;">
-            <div class="product-image">
-              <img src="images/pic4m.jpg" alt="GV12">
-              <span class="product-tag usada">Usada</span>
-            </div>
-            <div class="product-info">
-              <h3>GV12 9kw / 4,5kw</h3>
-              <p>Ótima para detail e delivery. Possui controle de umidade e jato de água quente. Excelente custo-benefício.</p>
-              <div class="product-features">
-                <span>Delivery</span>
-                <span>Econômica</span>
-                <span>Controlada</span>
-              </div>
-              <a href="contact.html" class="btn btn-primary">Ver Detalhes</a>
-            </div>
-          </article>
-
-          <!-- Produto 6 (Usada) -->
-          <article class="product-card fade-in-up" data-name="GV DIESEL USADA" style="animation-delay: 0.5s;">
-            <div class="product-image">
-              <img src="images/pic8m.jpg" alt="GV DIESEL">
-              <span class="product-tag usada">Usada</span>
-            </div>
-            <div class="product-info">
-              <h3>GV DIESEL</h3>
-              <p>Tecnologia limpa: não faz fumaça nem possui chama exposta. Consumo baixíssimo de apenas 1,5L/hora.</p>
-              <div class="product-features">
-                <span>Diesel</span>
-                <span>Sem Fumaça</span>
-                <span>Autônoma</span>
-              </div>
-              <a href="contact.html" class="btn btn-primary">Ver Detalhes</a>
-            </div>
-          </article>
-        </div>
-        
-        <div id="noResults" style="display: none; text-align: center; padding: 40px;">
-          <h3>Nenhum produto encontrado para sua pesquisa.</h3>
-          <p>Tente outros termos ou entre em contato conosco.</p>
-        </div>
+    <main class="main wrap" style="padding-top: 60px;">
+      <div class="search-container fade-in-up">
+        <input type="text" id="productSearch" placeholder="Pesquisar vaporizadora (ex: LV-23, Extratora...)" />
       </div>
+
+      <div class="grid-3" id="productGrid">
+        <!-- Produto 1 -->
+        <article class="card fade-in-up" data-name="lv-23 dupla 15kw nova">
+          <div class="card-img">
+            <img src="images/pic26m.jpg" alt="LV-23 DUPLA 15kw">
+            <span class="card-tag">Nova</span>
+          </div>
+          <div class="card-body">
+            <h3>LV-23 DUPLA 15kw</h3>
+            <p>Ideal para energia trifásica. Permite lavar e higienizar simultaneamente com máxima eficiência em grandes espaços.</p>
+            <div class="card-specs">
+              <span>Potência: 15kw</span>
+              <span>Tensão: Trifásica</span>
+              <span>Saídas: 3</span>
+              <span>Uso: Industrial/Pesado</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
+          </div>
+        </article>
+
+        <!-- Produto 2 -->
+        <article class="card fade-in-up" data-name="lv-15 10kw 15kw nova" style="transition-delay: 0.1s;">
+          <div class="card-img">
+            <img src="images/pic27m.jpg" alt="LV-15 10kw / 15kw">
+            <span class="card-tag">Nova</span>
+          </div>
+          <div class="card-body">
+            <h3>LV-15 10kw / 15kw</h3>
+            <p>Lavadora e Extratora em um só equipamento. Versátil e potente, perfeita para detalhamento rigoroso.</p>
+            <div class="card-specs">
+              <span>Potência: 10/15kw</span>
+              <span>Tensão: Mono/Tri</span>
+              <span>Saídas: 2</span>
+              <span>Uso: Lava-rápido</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
+          </div>
+        </article>
+
+        <!-- Produto 3 -->
+        <article class="card fade-in-up" data-name="lv-23 dupla portatil 15kw nova" style="transition-delay: 0.2s;">
+          <div class="card-img">
+            <img src="images/pic28m.jpg" alt="LV-23 DUPLA Portátil">
+            <span class="card-tag">Nova</span>
+          </div>
+          <div class="card-body">
+            <h3>LV-23 DUPLA Portátil</h3>
+            <p>A potência da LV-23 em um formato portátil. Mobilidade sem perder a altíssima pressão para limpezas profundas.</p>
+            <div class="card-specs">
+              <span>Potência: 15kw</span>
+              <span>Tensão: Trifásica</span>
+              <span>Saídas: 2</span>
+              <span>Uso: Móvel Profissional</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
+          </div>
+        </article>
+
+        <!-- Produto 4 -->
+        <article class="card fade-in-up" data-name="ev-7 extratora 2kw 4kw nova">
+          <div class="card-img">
+            <img src="images/pic29m.jpg" alt="EV-7 EXTRATORA">
+            <span class="card-tag">Nova</span>
+          </div>
+          <div class="card-body">
+            <h3>EV-7 EXTRATORA</h3>
+            <p>Especialista em higienização. Leve e compacta, excelente para estofados, sofás e interior de veículos.</p>
+            <div class="card-specs">
+              <span>Potência: 2/4kw</span>
+              <span>Tensão: Monofásica</span>
+              <span>Saídas: 1</span>
+              <span>Uso: Residencial/Leve</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
+          </div>
+        </article>
+
+        <!-- Produto 5 (Usada) -->
+        <article class="card fade-in-up" data-name="gv12 9kw 4,5kw usada" style="transition-delay: 0.1s;">
+          <div class="card-img">
+            <img src="images/pic4m.jpg" alt="GV12">
+            <span class="card-tag usada">Usada</span>
+          </div>
+          <div class="card-body">
+            <h3>GV12 9kw / 4,5kw</h3>
+            <p>Ótima para detail e delivery. Possui controle de umidade. Equipamento revisado com garantia de funcionamento.</p>
+            <div class="card-specs">
+              <span>Potência: 4.5/9kw</span>
+              <span>Tensão: Mono/Tri</span>
+              <span>Saídas: 1</span>
+              <span>Uso: Delivery Básico</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
+          </div>
+        </article>
+
+        <!-- Produto 6 (Usada) -->
+        <article class="card fade-in-up" data-name="gv diesel usada" style="transition-delay: 0.2s;">
+          <div class="card-img">
+            <img src="images/pic8m.jpg" alt="GV DIESEL">
+            <span class="card-tag usada">Usada</span>
+          </div>
+          <div class="card-body">
+            <h3>GV DIESEL</h3>
+            <p>Operação autônoma sem fumaça e sem chama exposta. Consumo super baixo, ideal para locais sem estrutura elétrica pesada.</p>
+            <div class="card-specs">
+              <span>Potência: Combustão</span>
+              <span>Autônoma</span>
+              <span>Saídas: 2</span>
+              <span>Uso: Frotas/Campo</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Solicitar Orçamento</a>
+          </div>
+        </article>
+      </div>
+      
+      <div id="noResults" style="display: none; text-align: center; padding: 40px;">
+        <h3 style="color: #e74c3c; margin-bottom: 10px;">Nenhum produto encontrado para sua pesquisa.</h3>
+        <p>Tente outros termos ou entre em contato conosco para verificarmos a disponibilidade.</p>
+      </div>
+
+      <!-- Tabela comparativa -->
+      <section>
+        <h2 class="section-title">Comparativo de <span class="accent-text">Modelos</span></h2>
+        <div class="comparison-table-wrapper fade-in-up">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Modelo</th>
+                <th>Potência (kw)</th>
+                <th>Saídas de Vapor</th>
+                <th>Tensão</th>
+                <th>Uso Recomendado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>EV-7 Extratora</td>
+                <td>2kw a 4kw</td>
+                <td>1 Saída</td>
+                <td>Monofásica</td>
+                <td>Residencial / Delivery Leve</td>
+              </tr>
+              <tr>
+                <td>LV-15</td>
+                <td>10kw a 15kw</td>
+                <td>2 Saídas</td>
+                <td>Mono/Trifásica</td>
+                <td>Delivery / Lava-rápido Médio</td>
+              </tr>
+              <tr>
+                <td>LV-23 Dupla Portátil</td>
+                <td>15kw</td>
+                <td>2 Saídas</td>
+                <td>Trifásica</td>
+                <td>Estética Automotiva Móvel</td>
+              </tr>
+              <tr>
+                <td>LV-23 Dupla Fixa</td>
+                <td>15kw</td>
+                <td>3 Saídas</td>
+                <td>Trifásica</td>
+                <td>Centro de Estética / Alto Fluxo</td>
+              </tr>
+              <tr>
+                <td>GV Diesel</td>
+                <td>Alto Rendimento</td>
+                <td>2 Saídas</td>
+                <td>Autônoma (Diesel)</td>
+                <td>Industrial / Frotas em campo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="wrap">
-        <div class="footer-content">
-          <div class="footer-col footer-about">
-            <img
-              src="images/logo.png"
-              alt="Equip Wash Steamer Logo"
-              class="footer-logo"
-            />
-            <p>
-              Soluções ecológicas e inovadoras em vapor para um futuro mais
-              limpo e sustentável.
-            </p>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <img src="images/logo.png" alt="Equip Wash Steamer Logo" class="footer-logo" />
+            <p>Soluções ecológicas e inovadoras em vapor para um futuro mais limpo e sustentável na estética automotiva.</p>
           </div>
-          <div class="footer-col footer-links">
+          <div class="footer-col">
             <h4>Links Rápidos</h4>
-            <ul>
+            <ul class="footer-links">
               <li><a href="index.html">Home</a></li>
               <li><a href="products.html">Vaporizadoras</a></li>
               <li><a href="services.html">Soluções</a></li>
               <li><a href="contact.html">Contato</a></li>
             </ul>
           </div>
-          <div class="footer-col footer-contact">
+          <div class="footer-col">
             <h4>Contato</h4>
-            <p><strong>Telefone:</strong> (11) 94741-1490</p>
-            <p><strong>Email:</strong> contato@equipwashsteamer.com.br</p>
-          </div>
-          <div class="footer-col footer-newsletter">
-            <h4>Newsletter</h4>
-            <p>Receba nossas novidades e promoções em primeira mão.</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Seu melhor e-mail" required />
-              <button type="submit" class="btn btn-primary">Inscrever</button>
-            </form>
+            <p><strong>Telefone/WhatsApp:</strong> <br><a href="https://wa.me/5511947411490" target="_blank" style="color: #27ae60;">(11) 94741-1490</a></p>
+            <p><strong>Email:</strong> <br>contato@equipwashsteamer.com.br</p>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>
-            &copy; 2024 Equip Wash Steamer. Todos os direitos reservados.
-          </p>
-          <div class="footer-social">
-            <a href="#"><img src="images/fb.png" alt="Facebook" /></a>
-            <a href="#"><img src="images/tw.png" alt="Twitter" /></a>
+          <p>&copy; 2025 Equip Wash Steamer. Todos os direitos reservados.</p>
+          <div class="social-links">
+            <a href="https://facebook.com/equipwashsteamer" target="_blank" aria-label="Facebook">FB</a>
+            <a href="https://wa.me/5511947411490" target="_blank" aria-label="WhatsApp">WA</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        // Funcionalidade de Busca
-        $("#productSearch").on("keyup", function() {
-          var value = $(this).val().toLowerCase();
-          var visibleCards = 0;
-          
-          $("#productGrid .product-card").filter(function() {
-            var match = $(this).data("name").toLowerCase().indexOf(value) > -1;
-            $(this).toggle(match);
-            if (match) visibleCards++;
-          });
-          
-          if (visibleCards === 0) {
-            $("#noResults").show();
+    <script>
+      // Header Scroll Effect
+      const header = document.getElementById('mainHeader');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile Menu
+      const menuToggle = document.getElementById('menuToggle');
+      const navList = document.getElementById('navList');
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navList.classList.toggle('active');
+      });
+
+      // Product Search Filter
+      const searchInput = document.getElementById('productSearch');
+      const productCards = document.querySelectorAll('#productGrid .card');
+      const noResults = document.getElementById('noResults');
+
+      searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        let visibleCount = 0;
+        
+        productCards.forEach(card => {
+          const name = card.getAttribute('data-name');
+          if (name.includes(term)) {
+            card.style.display = 'flex';
+            visibleCount++;
           } else {
-            $("#noResults").hide();
+            card.style.display = 'none';
           }
         });
 
-        // Mobile Menu Toggle
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navList = document.querySelector(".nav-list");
+        if (visibleCount === 0) {
+          noResults.style.display = 'block';
+        } else {
+          noResults.style.display = 'none';
+        }
+      });
 
-        menuToggle.addEventListener("click", function() {
-          menuToggle.classList.toggle("active");
-          navList.classList.toggle("active");
+      // Intersection Observer for scroll animations
+      const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
         });
+      }, observerOptions);
 
-        // Close menu when a link is clicked
-        document.querySelectorAll(".nav-list a").forEach(link => {
-          link.addEventListener("click", () => {
-            menuToggle.classList.remove("active");
-            navList.classList.remove("active");
-          });
-        });
+      document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .zoom-in').forEach(el => {
+        observer.observe(el);
       });
     </script>
   </body>
