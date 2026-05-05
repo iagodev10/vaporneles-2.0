@@ -1,17 +1,20 @@
 /* ==========================================================================
    LIQUID GLASS (VIDRO LÍQUIDO) - FUTURISTIC DARK UI & NEON EFFECTS
-   Identidade Visual Preservada: #f58972 (Accent), #2c3e50 (Dark), Branco
+   Nova Identidade Visual: Azul #1E6FCC, Laranja #E84A0C, Dourado #F5C000
    ========================================================================== */
 
 :root {
-  /* Paleta Original do Projeto */
-  --brand-accent: #f58972;
-  --brand-accent-hover: #e86c55;
-  --brand-dark: #2c3e50;
+  /* Nova Paleta do Projeto */
+  --brand-accent: #E84A0C;
+  --brand-accent-hover: #F25C1A;
+  --brand-dark: #0A0A0A;
+  --brand-primary: #1E6FCC;
+  --brand-primary-hover: #2B8FE8;
+  --brand-gold: #F5C000;
   
   /* Efeitos de Vidro Líquido Escuro (Dark Liquid Glass) */
-  --glass-bg: linear-gradient(135deg, rgba(20, 25, 35, 0.6) 0%, rgba(10, 15, 25, 0.4) 100%);
-  --glass-bg-hover: linear-gradient(135deg, rgba(30, 35, 45, 0.7) 0%, rgba(20, 25, 35, 0.5) 100%);
+  --glass-bg: linear-gradient(135deg, rgba(10, 10, 10, 0.6) 0%, rgba(26, 26, 26, 0.4) 100%);
+  --glass-bg-hover: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(10, 10, 10, 0.5) 100%);
   
   /* Highlights / Contornos translúcidos para reflexo (Dark Mode) */
   --glass-border-top: rgba(255, 255, 255, 0.15);
@@ -26,14 +29,19 @@
   --glass-shadow: 0 15px 35px 0 rgba(0, 0, 0, 0.5);
   --glass-reflection: inset 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 20px rgba(255, 255, 255, 0.02);
   
-  /* Glows Neon com a cor original */
-  --accent-glow: 0 0 15px rgba(245, 137, 114, 0.5), 0 0 30px rgba(245, 137, 114, 0.3);
-  --accent-glow-hover: 0 0 20px rgba(245, 137, 114, 0.8), 0 0 40px rgba(245, 137, 114, 0.5), 0 0 60px rgba(245, 137, 114, 0.2);
-  --text-glow: 0 0 10px rgba(245, 137, 114, 0.6);
+  /* Glows Neon com a cor laranja */
+  --accent-glow: 0 0 15px rgba(232, 74, 12, 0.5), 0 0 30px rgba(232, 74, 12, 0.3);
+  --accent-glow-hover: 0 0 20px rgba(232, 74, 12, 0.8), 0 0 40px rgba(232, 74, 12, 0.5), 0 0 60px rgba(232, 74, 12, 0.2);
+  --text-glow: 0 0 10px rgba(232, 74, 12, 0.6);
+  
+  /* Glows Neon com a cor azul */
+  --primary-glow: 0 0 15px rgba(30, 111, 204, 0.5), 0 0 30px rgba(30, 111, 204, 0.3);
+  --primary-glow-hover: 0 0 20px rgba(30, 111, 204, 0.8), 0 0 40px rgba(30, 111, 204, 0.5), 0 0 60px rgba(30, 111, 204, 0.2);
+  --primary-text-glow: 0 0 10px rgba(30, 111, 204, 0.6);
   
   /* Cores de Texto (Dark UI) */
   --text-primary: #ffffff;
-  --text-secondary: #b0b8c0;
+  --text-secondary: #999999;
   --text-light: #ffffff;
   
   /* Bordas arredondadas altas */
@@ -42,7 +50,7 @@
   --border-radius-sm: 8px;
   
   /* Background Escuro */
-  --bg-dark: #070b10;
+  --bg-dark: #0A0A0A;
 }
 
 /* ==========================================================================
@@ -71,7 +79,7 @@ body::before, body::after {
 body::before {
   width: 50vw;
   height: 50vw;
-  background: var(--brand-accent); /* Laranja original */
+  background: var(--brand-accent); /* Laranja */
   top: -10%;
   left: -10%;
 }
@@ -79,7 +87,7 @@ body::before {
 body::after {
   width: 40vw;
   height: 40vw;
-  background: var(--brand-dark); /* Azul escuro original */
+  background: var(--brand-primary); /* Azul principal */
   bottom: -10%;
   right: -10%;
   animation-delay: -10s;
@@ -165,10 +173,10 @@ p {
   background: var(--glass-bg-hover) !important;
   transform: translateY(-8px) scale(1.02) !important;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.7), 
-              inset 0 0 0 1px rgba(245, 137, 114, 0.3), 
+              inset 0 0 0 1px rgba(232, 74, 12, 0.3), 
               var(--accent-glow) !important;
-  border-top-color: rgba(245, 137, 114, 0.4) !important;
-  border-left-color: rgba(245, 137, 114, 0.2) !important;
+  border-top-color: rgba(232, 74, 12, 0.4) !important;
+  border-left-color: rgba(232, 74, 12, 0.2) !important;
 }
 
 .carousel-item-content h2 a, .feature-item h3 {
@@ -227,9 +235,9 @@ p {
    BOTÕES LIQUID GLASS & NEON
    ========================================================================== */
 .btn-primary {
-  background: linear-gradient(135deg, rgba(245, 137, 114, 0.8) 0%, rgba(232, 108, 85, 0.6) 100%) !important;
+  background: linear-gradient(135deg, rgba(232, 74, 12, 0.8) 0%, rgba(242, 92, 26, 0.6) 100%) !important;
   backdrop-filter: blur(12px) !important;
-  border: 1px solid rgba(245, 137, 114, 0.5) !important;
+  border: 1px solid rgba(232, 74, 12, 0.5) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
   color: var(--text-light) !important;
   box-shadow: var(--accent-glow), inset 0 2px 6px rgba(255,255,255,0.2) !important;
@@ -240,7 +248,7 @@ p {
 
 .btn-primary:hover {
   transform: translateY(-4px) scale(1.05) !important;
-  background: linear-gradient(135deg, rgba(245, 137, 114, 1) 0%, rgba(232, 108, 85, 0.8) 100%) !important;
+  background: linear-gradient(135deg, rgba(232, 74, 12, 1) 0%, rgba(242, 92, 26, 0.8) 100%) !important;
   box-shadow: var(--accent-glow-hover), inset 0 2px 6px rgba(255,255,255,0.4) !important;
   color: #fff !important;
 }
@@ -257,10 +265,10 @@ p {
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(135deg, rgba(245, 137, 114, 0.15) 0%, rgba(245, 137, 114, 0.05) 100%) !important;
+  background: linear-gradient(135deg, rgba(232, 74, 12, 0.15) 0%, rgba(232, 74, 12, 0.05) 100%) !important;
   transform: translateY(-4px) scale(1.05) !important;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.4), var(--accent-glow), inset 0 2px 6px rgba(245,137,114,0.3) !important;
-  border-color: rgba(245, 137, 114, 0.5) !important;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4), var(--accent-glow), inset 0 2px 6px rgba(232,74,12,0.3) !important;
+  border-color: rgba(232, 74, 12, 0.5) !important;
   color: var(--brand-accent) !important;
   text-shadow: var(--text-glow) !important;
 }
@@ -284,7 +292,7 @@ p {
   background: linear-gradient(135deg, rgba(30, 35, 45, 0.8) 0%, rgba(20, 25, 35, 0.6) 100%) !important;
   color: var(--brand-accent) !important;
   border-top: 1px solid var(--brand-accent) !important;
-  box-shadow: 0 -8px 20px rgba(0,0,0,0.3), inset 0 2px 10px rgba(245, 137, 114, 0.1) !important;
+  box-shadow: 0 -8px 20px rgba(0,0,0,0.3), inset 0 2px 10px rgba(232, 74, 12, 0.1) !important;
   text-shadow: var(--text-glow) !important;
 }
 
@@ -310,7 +318,7 @@ p {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(245, 137, 114, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(232, 74, 12, 0.3), transparent);
 }
 
 .footer-col h4, .footer-bottom p {
@@ -359,10 +367,10 @@ input:focus, textarea:focus, .search-container input:focus {
 
 /* Login Box */
 #loginBox {
-  background: linear-gradient(135deg, rgba(20, 25, 35, 0.95) 0%, rgba(10, 15, 25, 0.9) 100%) !important;
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.95) 0%, rgba(26, 26, 26, 0.9) 100%) !important;
   backdrop-filter: var(--glass-blur) !important;
   border: 1px solid rgba(255,255,255,0.1) !important;
-  border-top: 1px solid rgba(245, 137, 114, 0.4) !important;
+  border-top: 1px solid rgba(232, 74, 12, 0.4) !important;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), var(--accent-glow) !important;
   border-radius: var(--border-radius-lg) !important;
 }
@@ -390,7 +398,7 @@ input:focus, textarea:focus, .search-container input:focus {
 /* Textos sobre fundos escuros originais */
 .banner-content h1, .product-hero h1 {
   color: var(--text-light) !important;
-  text-shadow: 0 5px 20px rgba(0,0,0,0.8), 0 0 40px rgba(245, 137, 114, 0.3) !important;
+  text-shadow: 0 5px 20px rgba(0,0,0,0.8), 0 0 40px rgba(232, 74, 12, 0.3) !important;
 }
 
 .banner-content p {
@@ -400,13 +408,13 @@ input:focus, textarea:focus, .search-container input:focus {
 
 .accent-text {
   color: var(--brand-accent) !important;
-  text-shadow: var(--text-glow), 0 0 20px rgba(245, 137, 114, 0.4) !important;
+  text-shadow: var(--text-glow), 0 0 20px rgba(232, 74, 12, 0.4) !important;
 }
 
 /* Imagens com reflexo de vidro sutil e brilho */
 .product-image img, .intro-image img, .tab-image img {
   border-radius: var(--border-radius-md) !important;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 20px rgba(245, 137, 114, 0.1) !important;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 0 20px rgba(232, 74, 12, 0.1) !important;
   transition: all 0.5s ease;
   filter: brightness(0.9) contrast(1.1);
 }
@@ -438,12 +446,12 @@ input:focus, textarea:focus, .search-container input:focus {
 
 /* Carousel Icon */
 .carousel-icon {
-  filter: drop-shadow(0 0 10px rgba(245, 137, 114, 0.4));
+  filter: drop-shadow(0 0 10px rgba(232, 74, 12, 0.4));
   transition: all 0.3s ease;
 }
 
 .carousel-item:hover .carousel-icon {
-  filter: drop-shadow(0 0 15px rgba(245, 137, 114, 0.8));
+  filter: drop-shadow(0 0 15px rgba(232, 74, 12, 0.8));
   transform: scale(1.1);
 }
 
