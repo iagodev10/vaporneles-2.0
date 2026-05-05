@@ -269,6 +269,12 @@
         menuToggle.classList.toggle('active');
         navList.classList.toggle('active');
       });
+      document.querySelectorAll('#navList a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navList.classList.remove('active');
+        });
+      });
 
       // Product Search Filter
       const searchInput = document.getElementById('productSearch');
