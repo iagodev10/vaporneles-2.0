@@ -472,3 +472,446 @@ a:hover {
   color: var(--brand-accent-hover);
   text-shadow: var(--text-glow);
 }
+
+/* ==========================================================================
+   RESPONSIVO - LIQUID GLASS ADAPTATIONS
+   ========================================================================== */
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card {
+    padding: 50px !important;
+  }
+  
+  .header-top {
+    padding: 15px 40px !important;
+  }
+}
+
+/* Desktop (1200px - 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card {
+    padding: 40px !important;
+  }
+}
+
+/* Tablet Landscape (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card {
+    padding: 35px !important;
+    border-radius: var(--border-radius-md) !important;
+  }
+  
+  .header-top {
+    padding: 10px 30px !important;
+    border-radius: 40px !important;
+  }
+  
+  /* Reduzir blur em dispositivos menos potentes */
+  :root {
+    --glass-blur: blur(16px) saturate(140%);
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  :root {
+    --glass-blur: blur(14px) saturate(130%);
+    --border-radius-lg: 20px;
+    --border-radius-md: 14px;
+  }
+  
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card,
+  .resp-tabs-container {
+    padding: 30px !important;
+    border-radius: var(--border-radius-md) !important;
+  }
+  
+  .header-top {
+    padding: 10px 25px !important;
+    border-radius: 35px !important;
+    margin: 10px !important;
+    width: calc(100% - 20px) !important;
+    left: 10px !important;
+  }
+  
+  /* Background blobs menores */
+  body::before {
+    width: 60vw;
+    height: 60vw;
+    opacity: 0.08;
+  }
+  
+  body::after {
+    width: 50vw;
+    height: 50vw;
+    opacity: 0.08;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 10px 25px !important;
+    font-size: 0.9em !important;
+  }
+  
+  #loginBox {
+    width: 90% !important;
+    max-width: 400px !important;
+    padding: 30px !important;
+  }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  :root {
+    --glass-blur: blur(12px) saturate(120%);
+    --border-radius-lg: 16px;
+    --border-radius-md: 12px;
+    --border-radius-sm: 6px;
+  }
+  
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card,
+  .resp-tabs-container {
+    padding: 25px !important;
+    border-radius: var(--border-radius-md) !important;
+  }
+  
+  .header-top {
+    padding: 8px 20px !important;
+    border-radius: 30px !important;
+    margin: 8px !important;
+    width: calc(100% - 16px) !important;
+    left: 8px !important;
+  }
+  
+  /* Background blobs ainda menores */
+  body::before {
+    width: 70vw;
+    height: 70vw;
+    opacity: 0.06;
+    top: -15%;
+    left: -20%;
+  }
+  
+  body::after {
+    width: 60vw;
+    height: 60vw;
+    opacity: 0.06;
+    bottom: -15%;
+    right: -20%;
+  }
+  
+  /* Hover effects reduzidos para touch */
+  .carousel-item-content:hover, 
+  .about-card:hover, 
+  .feature-item:hover, 
+  .product-card:hover,
+  .service-card:hover,
+  .testimonial:hover {
+    transform: translateY(-4px) scale(1.01) !important;
+  }
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 10px 22px !important;
+    font-size: 0.85em !important;
+  }
+  
+  /* Tabs responsivos */
+  .resp-tabs-list li {
+    padding: 10px 15px !important;
+    font-size: 0.85em !important;
+    margin-right: 4px !important;
+  }
+  
+  #loginBox {
+    width: 95% !important;
+    max-width: 380px !important;
+    padding: 25px !important;
+    border-radius: var(--border-radius-md) !important;
+  }
+  
+  /* Imagens */
+  .product-image img, .intro-image img, .tab-image img {
+    border-radius: var(--border-radius-sm) !important;
+  }
+}
+
+/* Mobile Portrait (até 575px) */
+@media (max-width: 575px) {
+  :root {
+    --glass-blur: blur(10px) saturate(110%);
+    --border-radius-lg: 14px;
+    --border-radius-md: 10px;
+    --border-radius-sm: 6px;
+  }
+  
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card,
+  .resp-tabs-container {
+    padding: 20px !important;
+    border-radius: var(--border-radius-md) !important;
+  }
+  
+  .header-top {
+    padding: 8px 15px !important;
+    border-radius: 25px !important;
+    margin: 6px !important;
+    width: calc(100% - 12px) !important;
+    left: 6px !important;
+  }
+  
+  .cssmenu a {
+    font-size: 1em !important;
+  }
+  
+  /* Background blobs para mobile */
+  body::before {
+    width: 100vw;
+    height: 100vw;
+    opacity: 0.05;
+    top: -30%;
+    left: -30%;
+  }
+  
+  body::after {
+    width: 80vw;
+    height: 80vw;
+    opacity: 0.05;
+    bottom: -20%;
+    right: -30%;
+  }
+  
+  /* Desabilitar hover effects em touch */
+  .carousel-item-content:hover, 
+  .about-card:hover, 
+  .feature-item:hover, 
+  .product-card:hover,
+  .service-card:hover,
+  .testimonial:hover {
+    transform: none !important;
+    box-shadow: var(--glass-shadow), var(--glass-reflection) !important;
+  }
+  
+  .btn-primary:hover, .btn-secondary:hover {
+    transform: none !important;
+  }
+  
+  /* Active states para touch */
+  .carousel-item-content:active, 
+  .about-card:active, 
+  .feature-item:active, 
+  .product-card:active,
+  .service-card:active,
+  .testimonial:active {
+    transform: scale(0.98) !important;
+    transition: transform 0.1s ease !important;
+  }
+  
+  .btn-primary:active, .btn-secondary:active {
+    transform: scale(0.95) !important;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 12px 20px !important;
+    font-size: 0.85em !important;
+    width: 100%;
+  }
+  
+  /* Tabs em coluna no mobile */
+  .resp-tabs-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .resp-tabs-list li {
+    border-radius: var(--border-radius-sm) !important;
+    margin-right: 0 !important;
+    padding: 12px 15px !important;
+    text-align: center !important;
+  }
+  
+  /* Inputs */
+  input[type="text"], input[type="email"], textarea, .search-container input {
+    padding: 14px 18px !important;
+    border-radius: 30px !important;
+    font-size: 16px !important; /* Previne zoom no iOS */
+  }
+  
+  textarea {
+    border-radius: var(--border-radius-sm) !important;
+  }
+  
+  #loginBox {
+    width: 95% !important;
+    max-width: none !important;
+    margin: 10px !important;
+    padding: 25px 20px !important;
+    border-radius: var(--border-radius-md) !important;
+  }
+  
+  /* Footer */
+  .footer {
+    padding-top: 40px !important;
+  }
+  
+  .footer::before {
+    background: linear-gradient(90deg, transparent, rgba(232, 74, 12, 0.2), transparent);
+  }
+  
+  /* Imagens */
+  .product-image img, .intro-image img, .tab-image img {
+    border-radius: var(--border-radius-sm) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4) !important;
+  }
+  
+  /* Remover animação de brilho em mobile para performance */
+  .carousel-item-content::after, 
+  .about-card::after, 
+  .feature-item::after, 
+  .product-card::after {
+    display: none !important;
+  }
+}
+
+/* Mobile Extra Small (até 375px) */
+@media (max-width: 375px) {
+  :root {
+    --glass-blur: blur(8px) saturate(100%);
+    --border-radius-lg: 12px;
+    --border-radius-md: 8px;
+  }
+  
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card,
+  .resp-tabs-container {
+    padding: 15px !important;
+  }
+  
+  .header-top {
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+  }
+  
+  body::before, body::after {
+    opacity: 0.04;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 10px 18px !important;
+    font-size: 0.8em !important;
+  }
+  
+  #loginBox {
+    padding: 20px 15px !important;
+  }
+}
+
+/* Landscape orientation no mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  body::before, body::after {
+    opacity: 0.04;
+  }
+  
+  .header-top {
+    padding: 6px 20px !important;
+  }
+  
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card {
+    padding: 20px !important;
+  }
+}
+
+/* Preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  body::before, body::after {
+    animation: none !important;
+  }
+  
+  .carousel-item-content:hover::after, 
+  .about-card:hover::after, 
+  .feature-item:hover::after, 
+  .product-card:hover::after {
+    transition: none !important;
+  }
+  
+  .carousel-item-content:hover, 
+  .about-card:hover, 
+  .feature-item:hover, 
+  .product-card:hover,
+  .service-card:hover,
+  .testimonial:hover,
+  .btn-primary:hover, 
+  .btn-secondary:hover {
+    transform: none !important;
+    transition: background 0.2s ease, box-shadow 0.2s ease !important;
+  }
+}
+
+/* Print - desabilitar efeitos visuais */
+@media print {
+  body::before, body::after {
+    display: none !important;
+  }
+  
+  .carousel-item-content, 
+  .about-card, 
+  .feature-item, 
+  .product-card,
+  .testimonial,
+  .service-card,
+  .resp-tabs-container,
+  .header-top,
+  #loginBox {
+    background: #fff !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, a {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+}
