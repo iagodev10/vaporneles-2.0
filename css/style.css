@@ -86,13 +86,13 @@ p { margin-bottom: 1.5em; color: #666666; }
 /* ==========================================================================
    HERO SECTIONS
    ========================================================================== */
-.hero { min-height: 100vh; background: linear-gradient(135deg, rgba(6, 42, 82, 0.88) 0%, rgba(11, 58, 115, 0.96) 100%), url('../images/bg.jpg') center/cover; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; background-attachment: fixed; }
+.hero { min-height: 100vh; background: linear-gradient(135deg, rgba(6, 42, 82, 0.38) 0%, rgba(11, 58, 115, 0.96) 100%), url('../images/imagemquatro.png') center/cover; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; overflow: hidden; background-attachment: fixed; }
 .hero-content { position: relative; z-index: 10; max-width: 900px; padding: 0 20px; }
 .hero h1 { font-size: 4em; color: #fff; margin-bottom: 20px; }
 .hero p { font-size: 1.5em; color: #F2F2F2; margin-bottom: 40px; }
 .hero-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
-.page-hero { min-height: 40vh; background: linear-gradient(135deg, rgba(6, 42, 82, 0.94) 0%, rgba(30, 111, 204, 0.85) 100%), url('../images/bg.jpg') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; }
+.page-hero { min-height: 40vh; background: linear-gradient(135deg, rgba(6, 42, 82, 0.34) 0%, rgba(30, 111, 204, 0.85) 100%), url('../images/imagemquatro.png') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; }
 .page-hero h1 { font-size: 3.5em; color: #fff; margin-bottom: 10px; }
 .page-hero p { font-size: 1.2em; color: #F2F2F2; margin: 0; }
 
@@ -186,7 +186,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
    ========================================================================== */
 .footer {
   background:
-    linear-gradient(135deg, rgba(6, 42, 82, 0.92) 0%, rgba(11, 58, 115, 0.92) 100%),
+    linear-gradient(135deg, rgba(6, 42, 82, 0.52) 0%, rgba(11, 58, 115, 0.92) 100%),
     url('../images/imagemum.png') center/cover no-repeat;
   color: #F2F2F2;
   padding: 80px 0 20px;
@@ -197,7 +197,7 @@ textarea.form-control { resize: vertical; min-height: 120px; }
 .footer-logo { max-width: 150px; margin-bottom: 20px; filter: brightness(0) invert(1); }
 .footer-links { padding: 0; }
 .footer-links li { margin-bottom: 12px; list-style: none; }
-.footer-links a { color: #999; transition: all 0.3s ease; display: inline-block; }
+.footer-links a { color: #ffffff; transition: all 0.3s ease; display: inline-block; }
 .footer-links a:hover { color: #E84A0C; transform: translateX(5px); }
 .social-links { display: flex; gap: 15px; margin-top: 20px; }
 .social-links a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); color: #fff; transition: all 0.3s ease; }
